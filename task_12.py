@@ -60,8 +60,7 @@ def main() -> None:
     holes, no_holes = count_holes_letters(text)
     print(holes, no_holes)
 
-    filtered_words = get_words_holes(words)
-    print(filtered_words)
+    print(get_words_holes(words))
 
 
 if __name__ == "__main__":
