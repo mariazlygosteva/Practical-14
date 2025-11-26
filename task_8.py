@@ -18,5 +18,4 @@ def sort_string(s: str) -> str:
 
 
 line = input()
-result = sort_string(line)
-print(result)
+print(sort_string(line))
