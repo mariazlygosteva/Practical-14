@@ -14,7 +14,7 @@ def move_elements() -> None:
     start, end = map(int, input().split())
 
     elements_to_move = lst1[start - 1:end]
-    lst2.extend(elements_to_move)
+    lst2 += elements_to_move
     lst1 = lst1[:start - 1] + lst1[end:]
 
     print(lst1)
