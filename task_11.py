@@ -1,15 +1,28 @@
-lst = list(map(int, input().split()))
-command = input().strip()
+def rotate_list() -> None:
+    """
+    Rotates a list left or right by specified number of steps.
 
-direction = command[0]
-steps = int(command[1:])
+    Args:
+        None: Reads list and rotation command from standard input.
 
-match direction.upper():
-    case 'R':
-        steps = steps % len(lst)
-        lst = lst[-steps:] + lst[:-steps]
-    case 'L':
-        steps = steps % len(lst)
-        lst = lst[steps:] + lst[:steps]
+    Returns:
+        None: Prints the rotated list to standard output.
+    """
+    lst = list(map(int, input().split()))
+    command = input().strip()
 
-print(lst)
+    direction = command[0]
+    steps = int(command[1:])
+
+    match direction.upper():
+        case 'R':
+            steps = steps % len(lst)
+            lst = lst[-steps:] + lst[:-steps]
+        case 'L':
+            steps = steps % len(lst)
+            lst = lst[steps:] + lst[:steps]
+
+    print(lst)
+
+
+rotate_list()
